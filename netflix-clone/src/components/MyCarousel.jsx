@@ -84,7 +84,7 @@ class MyCarousel extends Component {
         //     isLoading: false,
         // })
 
-        fetch('http://www.omdbapi.com/?apikey=66a19e9&s=' + searchString)
+        fetch('http://www.omdbapi.com/?apikey=66a19se9&s=' + searchString)
             .then(response => {
                 if (response.ok) {
                     // la chiamata ha tornato 200
@@ -108,7 +108,7 @@ class MyCarousel extends Component {
                 console.error(error);
                 // console.log('title nel catch', this.props.title)
                 // // Per qualche oscuro motivo react pensa che onFetchError sia una classe e non una callback
-                // this.props.onFetchError()
+                this.props.onFetchError()
             })
 
     }

@@ -11,12 +11,12 @@ import SettingsPage from './components/SettingsPage.jsx';
 
 function App() {
   return (
-    <div className='bg-black text-light p-0 m-0'>
+    <div className='bg-black text-light p-0 m-0 vh-100 d-flex flex-column'>
       <header>
         <MyNav />
       </header>
 
-      <main>
+      <main className='flex-grow-1'>
         <MyMain />
         {/* <SettingsPage /> */}
       </main>

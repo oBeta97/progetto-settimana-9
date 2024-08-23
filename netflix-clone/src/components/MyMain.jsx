@@ -1,7 +1,7 @@
 import MyMainTitle from "./MyMainTitle";
 import CarouselSection from "./CarouselSection";
 import { Component } from "react";
-import { Alert } from "bootstrap";
+import { Alert } from "react-bootstrap";
 
 class MyMain extends Component {
 
@@ -16,7 +16,7 @@ class MyMain extends Component {
 
                 {
                     this.state.fetchError ? (
-                        <Alert variant="Warning">
+                        <Alert variant="danger" className="text-center">
                             Errore nella fetch!
                         </Alert>
                     ) : (
