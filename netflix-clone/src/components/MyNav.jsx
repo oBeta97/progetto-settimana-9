@@ -1,7 +1,5 @@
 import { Component } from "react";
 import logo from '../assets/img/netflix_logo.png'
-import { Collapse } from "react-bootstrap";
-
 
 class MyNav extends Component {
 

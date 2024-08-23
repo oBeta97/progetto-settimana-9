@@ -18,19 +18,19 @@ class MyCarousel extends Component {
     responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
-            breakpoint: { max: 4000, min: 3000 },
-            items: 5
+            breakpoint: { max: 4000, min: 992 },
+            items: 4
         },
         desktop: {
-            breakpoint: { max: 3000, min: 1024 },
+            breakpoint: { max: 992, min: 768 },
             items: 3
         },
         tablet: {
-            breakpoint: { max: 1024, min: 464 },
+            breakpoint: { max: 768, min: 576 },
             items: 2
         },
         mobile: {
-            breakpoint: { max: 464, min: 0 },
+            breakpoint: { max: 576, min: 0 },
             items: 1
         }
     };
@@ -51,7 +51,7 @@ class MyCarousel extends Component {
                         ) :
 
                         (
-                            <Carousel responsive={this.responsive}>
+                            <Carousel infinite={true} responsive={this.responsive}>
                                 {
 
                                     this.state.searchRes.Search.map((film) =>

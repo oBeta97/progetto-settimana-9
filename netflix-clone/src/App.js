@@ -7,6 +7,7 @@ import "../node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
 import MyNav from './components/MyNav';
 import MyMain from './components/MyMain.jsx';
 import MyFooter from './components/MyFooter.jsx';
+import SettingsPage from './components/SettingsPage.jsx';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       </header>
 
       <main>
-        <MyMain />
+        {/* <MyMain /> */}
+        <SettingsPage />
       </main>
 
       <footer className='bg-black text-secondary'>
