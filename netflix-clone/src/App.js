@@ -17,8 +17,8 @@ function App() {
       </header>
 
       <main>
-        {/* <MyMain /> */}
-        <SettingsPage />
+        <MyMain />
+        {/* <SettingsPage /> */}
       </main>
 
       <footer className='bg-black text-secondary'>

@@ -1,7 +1,13 @@
 import { Component } from "react";
 import logo from '../assets/img/netflix_logo.png'
+import UserModal from "./UserModal";
 
 class MyNav extends Component {
+
+    state ={ 
+        showModal:false
+    }
+
 
     render() {
         return (
@@ -48,12 +54,15 @@ class MyNav extends Component {
                                 <i className="text-light bi bi-bell-fill nav-link"></i>
                             </li>
                             <li className="nav-item dropdown ">
-                                <a className="nav-link dropdown-toggle text-light" href="#" role="button"
+
+                                <UserModal show={this.state.showModal}/>
+
+                                {/* <a className="nav-link dropdown-toggle text-light" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     <span className="bg-success px-1 py-2 rounded text-light">
                                         (¬‿¬)
                                     </span>
-                                </a>
+                                </a> */}
                                 <ul className="dropdown-menu dropdown-menu-end bg-black-subtle">
                                     <li>
                                         <a className="dropdown-item" href="./settings.html">Settings</a>
