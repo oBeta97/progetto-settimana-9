@@ -11,7 +11,7 @@ const CarouselSection = (props) =>{
 
                 <section className="row">
 
-                    <MyCarousel title={props.title}/>
+                    <MyCarousel title={props.title} onFetchError={() => props.onFetchError()}/>
 
                 </section>
 

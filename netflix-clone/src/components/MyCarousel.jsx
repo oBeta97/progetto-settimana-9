@@ -12,8 +12,9 @@ class MyCarousel extends Component {
 
     state = {
         isLoading: true,
-        searchRes: {}
+        searchRes: {},
     }
+
     responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -38,6 +39,7 @@ class MyCarousel extends Component {
     render() {
         return (
             <>
+
                 {
                     this.state.isLoading ? (
                         <Spinner animation="grow" variant="danger" />
@@ -53,8 +55,8 @@ class MyCarousel extends Component {
                                 {
 
                                     this.state.searchRes.Search.map((film) =>
-                                        <div>
-                                            <img src={film.Poster} style={{maxHeight: "20em"}} alt="image not found" />
+                                        <div key={film.imdbID}>
+                                            <img src={film.Poster} style={{ maxHeight: "20em" }} alt="image not found" />
                                         </div>
                                     )
                                 }
@@ -65,12 +67,9 @@ class MyCarousel extends Component {
         )
     }
 
-
-
     componentDidMount = () => {
         this.fetch(this.props.title)
     }
-
 
     fetch = async (searchString) => {
 
@@ -107,8 +106,15 @@ class MyCarousel extends Component {
             })
             .catch(error => {
                 console.error(error);
+                // console.log('title nel catch', this.props.title)
+                // // Per qualche oscuro motivo react pensa che onFetchError sia una classe e non una callback
+                // this.props.onFetchError()
             })
 
+    }
+
+    handleFetchError = () => {
+        
     }
 }
 
